@@ -1,7 +1,6 @@
 "use client";
-import images from "next/image";
 import CustomButton from "@/components/CustomButton";
-import Image from "next/image";
+import { default as Image, default as images } from "next/image";
 
 const Hero = () =>{
     const handleMoving = () => {
