@@ -1,17 +1,29 @@
-import bodyParser from 'body-parser';
-import express from 'express';
-import carsRoutes from './routes/cars.js';
+//imports
+require('dotenv').config({ path: `${process.cwd()}/.env` });
+const express = require('express');
+const authRouter = require('./routes/authRoute');
 
+//app
 const app = express();
-const PORT = 5000;
-
-app.use(bodyParser.json());
-app.use('/cars', carsRoutes);
+//middleware
+app.use(express.json());
 
 app.get('/', (req, res) => {
-	res.send('Hello World!');
+  res.status(200).json({
+    message: 'Hello from syaarty'
+  });
 });
 
-app.listen(PORT, () => {
-	console.log(`Server is running on port ${PORT}.`);
+//routes
+app.use('/auth', authRouter);
+
+// 404
+app.use('*', (req, res, next) => {
+  res.status(404).json({
+    message: 'Route not found'
+  });
 });
+
+//server
+const port = process.env.APP_PORT || 4000;
+app.listen(port, () => console.log(`app listening on port ${port}!`));
