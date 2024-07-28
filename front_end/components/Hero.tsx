@@ -24,13 +24,13 @@ const Hero = () =>{
                     handleClick={handleMoving}
                 />
             </div>
-            <div className="hero__image-csontainer">
+            <div className="hero__image-container">
                 <div className="hero__image">
                     <Image
                     src="/2020_Altima_Big.png"
                     alt={"Hero"}
                     fill
-                    className="object-cover"
+                    className="object-contain"
                     />
                     <div className="hero__image-overlay" />
                 <div/>
