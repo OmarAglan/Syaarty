@@ -1,11 +1,5 @@
 "use client";
-import CustomButton from "@/components/CustomButton";
-import { default as Image, default as images } from "next/image";
-
 const Hero = () =>{
-    const handleMoving = () => {
-
-    }
     return (
         <main className=" bg-white relative overflow-hidden">
             <div className="bg-white  flex relative z-20 items-center overflow-hidden">
