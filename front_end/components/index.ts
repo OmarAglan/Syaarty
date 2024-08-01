@@ -1,11 +1,10 @@
-import hero from "@/components/Hero";
 import CustomButton from "@/components/CustomButton";
-import NavBar from "@/components/NavBar";
+import CustomFilter from "@/components/CustomFilter";
 import Footer from "@/components/Footer";
+import hero from "@/components/Hero";
+import NavBar from "@/components/NavBar";
+import SearchBar from "@/components/SearchBar";
 
 export {
-    hero,
-    CustomButton,
-    NavBar,
-    Footer
-}
+    CustomButton, CustomFilter, Footer, NavBar, SearchBar, hero
+};

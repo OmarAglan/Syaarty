@@ -1,5 +1,7 @@
 import Image from "next/image";
-import react from "react";
+import Link from "next/link";
+import { footerLinks } from '../constants/index';
+
 
 const Footer = () => {
     return (
@@ -13,6 +15,37 @@ const Footer = () => {
                         height={18}
                         className="object-contain"
                     />
+                    <p className="text-base text-gray-700">
+                        سيارتي 2024 <br></br> جميع الحقوق محفوظة
+                    </p>
+                </div>
+
+                <div className="footer__links">
+                    {footerLinks.map((link) => (
+                        <div key={link.title} className="footer__link">
+                            <h3 className="font-bold">
+                                {link.title}
+                            </h3>
+                            {link.links.map((item) => (
+                                <Link key={item.title} href={item.url} className="text-gray-500">
+                                    {item.title}
+                                </Link>
+                            ))}
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <div className="flex justify-between items-center flex-wrap mt-10 border-t border-gray-100 sm:px-16 px-6 py-10">
+                <div className="footer__copyrights-link">
+                    <p>
+                        جميع الحقوق محفوظة © 2024
+                    </p>
+                    <Link href={'/'} className="text-gray-500">
+                        الشروط والأحكام
+                    </Link>
+                    <Link href={'/'} className="text-gray-500">
+                        سياسة الخصوصية
+                    </Link>
                 </div>
             </div>
         </footer>
