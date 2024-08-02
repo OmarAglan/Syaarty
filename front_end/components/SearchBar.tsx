@@ -1,14 +1,20 @@
 'use client'
-import React from 'react'
+import { useState } from 'react'
+import SearchManfuacturer from './SearchManfuacturer'
 
 function SearchBar() {
+    const [manfuacturer, setManfuacturer] = useState('')
+
     const handleSearch = () => {
 
     }
     return (
         <form className='searchbar' onSubmit={handleSearch}>
             <div className='searchbar__item'>
-                <SearchManfuacturer />
+                <SearchManfuacturer
+                    manfuacturer={manfuacturer}
+                    setManfuacturer={setManfuacturer}
+                />
             </div>
         </form>
     )
