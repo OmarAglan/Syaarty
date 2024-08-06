@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 
 function SearchManfuacturer({ manfuacturer, setManfuacturer }: SearchManfuacturerPrpos) {
+    const [query, setQuery] = useState('')
     return (
         <div className='search-manufacturer'>
             <Combobox>
@@ -23,8 +24,12 @@ function SearchManfuacturer({ manfuacturer, setManfuacturer }: SearchManfuacture
                         className='search-manufacturer__input'
                         placeholder='البحث بالماركة'
                         displayValue={(manfuacturer: string) => manfuacturer}
-                        onChange={''}
+                        onChange={(event) => setQuery(event.currentTarget.value)}
                     />
+
+                    <Transition>
+
+                    </Transition>
                 </div>
             </Combobox>
         </div>
