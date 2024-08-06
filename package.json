@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"npm run dev --prefix front_end\" \"npm start --prefix back_end\"",
-    "build": "next build",
+    "build": "next build front_end",
     "start": "next start",
     "lint": "next lint"
   },
