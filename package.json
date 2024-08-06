@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "concurrently \"npm run dev --prefix front_end\" \"npm start --prefix back_end\"",
     "build": "next build front_end",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start front_end",
+    "lint": "next lint front_end"
   },
   "dependencies": {
     "@headlessui/react": "^2.1.2",
